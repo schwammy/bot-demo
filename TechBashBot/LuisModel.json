@@ -1,0 +1,477 @@
+{
+  "luis_schema_version": "2.2.0",
+  "versionId": "2",
+  "name": "DemoPrep",
+  "desc": "",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "None"
+    },
+    {
+      "name": "Registration"
+    },
+    {
+      "name": "Schedule"
+    },
+    {
+      "name": "Sessions"
+    }
+  ],
+  "entities": [
+    {
+      "name": "day"
+    },
+    {
+      "name": "session"
+    },
+    {
+      "name": "speaker"
+    },
+    {
+      "name": "time"
+    },
+    {
+      "name": "topic"
+    }
+  ],
+  "composites": [
+    {
+      "name": "SpeakerFullName",
+      "children": [
+        "speaker"
+      ]
+    }
+  ],
+  "closedLists": [],
+  "regex_entities": [],
+  "bing_entities": [],
+  "model_features": [
+    {
+      "name": "topic",
+      "mode": true,
+      "words": "cloud,saas,azure,javascript,.net,compiler,platform,roslyn,standard,jewelbots,build,master,class,developer,productivity,opinions,asp.net,core,nuget,packages,ai,microsoft,cognitive,services,image,voice,intelligence,angular,games,apps,xbox,tips,tricks,performance,web,forms,unit,testing,aurelia,application insights,telemetry,machine,learning,beginner,html,bot,chat,spa,firebase,alexa,skill,aws,lambda,iot,multiplayer,game,google,restful,apis,design,kids,mixed reality,hololens,immersive,unity,applications,angularjs,typescript,c#,language,containers,windows,deployment,continuous,vsts,octopus,deploy,integration,theory,cqrs,architecture,plug-in,solid,api,custom,middleware,microservices,debugging,visual studio,security,deploying,production,designing,distributed,analytics,data science,big-data,develop,depression,di,dependency injection,docker,domain-driven,dotnet,webtask,actor models,systems,micro-service,architectures,service fabric,domain driven,patterns,model,concurrent systems,akka.net,xamarin,mobile,signalr,reactive extensions,entity framework,bootstrap,atomic,database,oss,await,asynchronous,impostor syndrome,delivery pipeline,dev-ops,dev-test-ops,instrumenting,logs,elasticsearch,kibana,agile,enterprise,introduction,webgl,mobx,react,ionic,lean,mean,ee,golang,builds,go,bdd,specflow,look,migrating,object-oriented,rx,refactoring,s.o.l.i.d.,foundation,release management,team,robot,scaling,sensors,technology,trends,nosql,data,multi-tenancy,models,effectiveness,user,validation,process,key,customer,value,container,orchestration,kubernetes,bots,open source,devops,management,e commerce,soa,scalability,computing,silverlight,browser,strategies,leveraging,ecommerce,solutions,cloud based,e business,web based,marketing,back end,enterprise level,software as a service,crm,end to end,enterprise wide,intranet,web enabled,outsourcing,mission critical,internet based,erp,server based,enterprise class,best of breed,back office,network based,lifecycle,customer facing,client/server,enterprise grade,service oriented,virtualized,business critical,software based,client server,windows based,on premise,ip based,component based,enterprisewide,client based,java based,high availability,thin client,fault tolerant,pc based,platform independent,virtualisation,on premises,linux based,enterprise scale,web centric,net based,highly scalable,unix based,python based,scale out,javascript based,gui based,mobile based,cloud hosted,web oriented,platform agnostic,data centric,community centric,infrastructure as a service,services based,app based,software driven,html5 based,portal based,services oriented,business centric,media centric,content centric,consumer centric,technology centric,enterprise focused,information centric,consumer facing,consumer oriented",
+      "activated": true
+    },
+    {
+      "name": "speaker name",
+      "mode": true,
+      "words": "alon fliess,alon,fliess,amanda lange,amanda,lange,ambrose little,ambrose,little,anne bougie,anne,bougie,anoop kumar,anoop,kumar,ashley grant,ashley,grant,bill wolff,bill,wolff,bradley holt,bradley,holt,chris houdeshell,chris,houdeshell,conference,damian brady,damian,brady,danny brown,danny,brown,dave voyles,dave,voyles,david giard,david,giard,donovan brown,donovan,eran stiller,eran,stiller,gajan pathmanathan,gajan,pathmanathan,glenn block,glenn,block,graham daniels,graham,daniels,greg baugues,greg,baugues,iris classon,iris,classon,james bender,james,bender,james tramel,tramel,jason van brackel,jason,van,brackel,jeffrey fritz,jeffrey,fritz,jeffrey rennie,rennie,jenny allar,jenny,allar,jeremy clark,jeremy,clark,jim wooley,jim,wooley,joe kuemerle,joe,kuemerle,joel cochran,joel,cochran,joseph guadagno,joseph,guadagno,josh garverick,josh,garverick,josh gretz,gretz,joy chakraborty,joy,chakraborty,jp toto,jp,toto,justin rusbatch,justin,rusbatch,ken dale,ken,dale,kendall miller,kendall,miller,kevin griffin,kevin,griffin,lee brandt,lee,brandt,mahesh chand,mahesh,chand,nate barbettini,nate,barbettini,nick landry,nick,landry,ondrej balas,ondrej,balas,oren novotny,oren,novotny,paul hacker,paul,hacker,pete brown,pete,richard taylor,richard,taylor,sam basu,sam,basu,samantha qui�ones,samantha,qui�ones,sara chipps,sara,chipps,scott allen,scott,allen,scott kay,kay,static void podcast,static,void,podcast,stephanie herr,stephanie,herr,stephen bohlen,stephen,bohlen,steve michelotti,steve,michelotti,suz hinton,suz,hinton,jeff",
+      "activated": true
+    },
+    {
+      "name": "day",
+      "mode": true,
+      "words": "wednesday,wed,thur,thurs,thursday,fri,friday",
+      "activated": true
+    }
+  ],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "any sessions about azure",
+      "intent": "Sessions",
+      "entities": [
+        {
+          "entity": "topic",
+          "startPos": 19,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "any sessions for bots",
+      "intent": "Sessions",
+      "entities": [
+        {
+          "entity": "topic",
+          "startPos": 17,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "any talks about bots",
+      "intent": "Sessions",
+      "entities": [
+        {
+          "entity": "topic",
+          "startPos": 16,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "any talks on azure",
+      "intent": "Sessions",
+      "entities": [
+        {
+          "entity": "topic",
+          "startPos": 13,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "any talks on fishing",
+      "intent": "Sessions",
+      "entities": [
+        {
+          "entity": "topic",
+          "startPos": 13,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "anyone speaking about azure",
+      "intent": "Sessions",
+      "entities": [
+        {
+          "entity": "topic",
+          "startPos": 22,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "are there any azure talks at 15:00",
+      "intent": "Schedule",
+      "entities": [
+        {
+          "entity": "topic",
+          "startPos": 14,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "are there any devops sessions at 1",
+      "intent": "Schedule",
+      "entities": [
+        {
+          "entity": "topic",
+          "startPos": 14,
+          "endPos": 19
+        },
+        {
+          "entity": "time",
+          "startPos": 33,
+          "endPos": 33
+        }
+      ]
+    },
+    {
+      "text": "are there any sessions about bots",
+      "intent": "Sessions",
+      "entities": [
+        {
+          "entity": "topic",
+          "startPos": 29,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "are you real",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "can i get tickets",
+      "intent": "Registration",
+      "entities": []
+    },
+    {
+      "text": "hello",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how to attend",
+      "intent": "Registration",
+      "entities": []
+    },
+    {
+      "text": "how to register for techbash",
+      "intent": "Registration",
+      "entities": []
+    },
+    {
+      "text": "is andy speaking at 1",
+      "intent": "Schedule",
+      "entities": [
+        {
+          "entity": "speaker",
+          "startPos": 3,
+          "endPos": 6
+        },
+        {
+          "entity": "time",
+          "startPos": 20,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "is andy speaking at 10",
+      "intent": "Schedule",
+      "entities": [
+        {
+          "entity": "speaker",
+          "startPos": 3,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "is anyone talking about azure",
+      "intent": "Sessions",
+      "entities": [
+        {
+          "entity": "topic",
+          "startPos": 24,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "is bill talking on friday",
+      "intent": "Schedule",
+      "entities": [
+        {
+          "entity": "speaker",
+          "startPos": 3,
+          "endPos": 6
+        },
+        {
+          "entity": "day",
+          "startPos": 19,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "register",
+      "intent": "Registration",
+      "entities": []
+    },
+    {
+      "text": "registration for techbash",
+      "intent": "Registration",
+      "entities": []
+    },
+    {
+      "text": "sessions at 10:45 on thursday",
+      "intent": "Schedule",
+      "entities": [
+        {
+          "entity": "time",
+          "startPos": 12,
+          "endPos": 13
+        },
+        {
+          "entity": "time",
+          "startPos": 15,
+          "endPos": 16
+        },
+        {
+          "entity": "day",
+          "startPos": 21,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "sessions at 9:30",
+      "intent": "Schedule",
+      "entities": [
+        {
+          "entity": "time",
+          "startPos": 12,
+          "endPos": 12
+        },
+        {
+          "entity": "time",
+          "startPos": 14,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "sessions at 9:30 on friday",
+      "intent": "Schedule",
+      "entities": [
+        {
+          "entity": "time",
+          "startPos": 12,
+          "endPos": 12
+        },
+        {
+          "entity": "time",
+          "startPos": 14,
+          "endPos": 15
+        },
+        {
+          "entity": "day",
+          "startPos": 20,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "sign up",
+      "intent": "Registration",
+      "entities": []
+    },
+    {
+      "text": "sponsor",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "sponsorship",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "ticket",
+      "intent": "Registration",
+      "entities": []
+    },
+    {
+      "text": "tix for techbash",
+      "intent": "Registration",
+      "entities": []
+    },
+    {
+      "text": "what is techbash",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what is your name",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what sessions are at 10",
+      "intent": "Schedule",
+      "entities": [
+        {
+          "entity": "time",
+          "startPos": 21,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "what sessions are at 2pm",
+      "intent": "Schedule",
+      "entities": [
+        {
+          "entity": "time",
+          "startPos": 21,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "what sessions are at 9 on friday",
+      "intent": "Schedule",
+      "entities": [
+        {
+          "entity": "time",
+          "startPos": 18,
+          "endPos": 21
+        },
+        {
+          "entity": "day",
+          "startPos": 26,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "what sessions are next",
+      "intent": "Schedule",
+      "entities": [
+        {
+          "entity": "time",
+          "startPos": 18,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "what sessions are on next",
+      "intent": "Schedule",
+      "entities": [
+        {
+          "entity": "time",
+          "startPos": 21,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "what talks are at 2pm today",
+      "intent": "Schedule",
+      "entities": [
+        {
+          "entity": "time",
+          "startPos": 18,
+          "endPos": 20
+        },
+        {
+          "entity": "day",
+          "startPos": 22,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "what time is it",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "when is andy speaking",
+      "intent": "Schedule",
+      "entities": [
+        {
+          "entity": "speaker",
+          "startPos": 8,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "when is donovan talking",
+      "intent": "Schedule",
+      "entities": [
+        {
+          "entity": "speaker",
+          "startPos": 8,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "where is techbash",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "who is speaking at 2",
+      "intent": "Schedule",
+      "entities": [
+        {
+          "entity": "time",
+          "startPos": 19,
+          "endPos": 19
+        }
+      ]
+    }
+  ]
+}
